@@ -30,8 +30,9 @@ import org.apache.ibatis.reflection.property.PropertyTokenizer;
  * @author Clinton Begin
  */
 public class MetaClass {
-
+  //ReflectorFactory对象，用于缓存Reflector对象
   private final ReflectorFactory reflectorFactory;
+  //在创建MetaClass会指定一个类，该Reflector对象会用于记录该类相关元信息
   private final Reflector reflector;
 
   private MetaClass(Class<?> type, ReflectorFactory reflectorFactory) {
